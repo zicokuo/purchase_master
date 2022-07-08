@@ -1,3 +1,12 @@
-# wagtial
+# core
 Django>=4.0,<4.1
 wagtail>=3.0,<3.1
+celery
+djangorestframework
+markdown
+django-filter
+drf_yasg[validation]
+drf_spectacular
+drf_spectacular_sidecar
+sentry_sdk
+pydash

@@ -4,16 +4,44 @@
 #
 #    pip-compile
 #
+amqp==5.1.1
+    # via kombu
 anyascii==0.3.1
     # via wagtail
 asgiref==3.5.2
     # via django
+attrs==21.4.0
+    # via jsonschema
 beautifulsoup4==4.9.3
     # via wagtail
+billiard==3.6.4.0
+    # via celery
+celery==5.2.7
+    # via -r requirements.in
 certifi==2022.6.15
-    # via requests
+    # via
+    #   requests
+    #   sentry-sdk
 charset-normalizer==2.0.12
     # via requests
+click==8.1.3
+    # via
+    #   celery
+    #   click-didyoumean
+    #   click-plugins
+    #   click-repl
+click-didyoumean==0.3.0
+    # via celery
+click-plugins==1.1.1
+    # via celery
+click-repl==0.2.0
+    # via celery
+coreapi==2.3.3
+    # via drf-yasg
+coreschema==0.0.4
+    # via
+    #   coreapi
+    #   drf-yasg
 django==4.0.5
     # via
     #   -r requirements.in
@@ -23,9 +51,14 @@ django==4.0.5
     #   django-taggit
     #   django-treebeard
     #   djangorestframework
+    #   drf-spectacular
+    #   drf-spectacular-sidecar
+    #   drf-yasg
     #   wagtail
 django-filter==21.1
-    # via wagtail
+    # via
+    #   -r requirements.in
+    #   wagtail
 django-modelcluster==6.0
     # via wagtail
 django-permissionedforms==0.1
@@ -35,44 +68,115 @@ django-taggit==2.1.0
 django-treebeard==4.5.1
     # via wagtail
 djangorestframework==3.13.1
-    # via wagtail
+    # via
+    #   -r requirements.in
+    #   drf-spectacular
+    #   drf-yasg
+    #   wagtail
 draftjs-exporter==2.1.7
     # via wagtail
+drf-spectacular==0.22.1
+    # via -r requirements.in
+drf-spectacular-sidecar==2022.7.1
+    # via -r requirements.in
+drf-yasg[validation]==1.20.0
+    # via -r requirements.in
 et-xmlfile==1.1.0
     # via openpyxl
 html5lib==1.1
     # via wagtail
 idna==3.3
     # via requests
+importlib-metadata==4.12.0
+    # via markdown
+inflection==0.5.1
+    # via
+    #   drf-spectacular
+    #   drf-yasg
+itypes==1.2.0
+    # via coreapi
+jinja2==3.1.2
+    # via coreschema
+jsonschema==4.6.2
+    # via
+    #   drf-spectacular
+    #   swagger-spec-validator
+kombu==5.2.4
+    # via celery
 l18n==2021.3
     # via wagtail
+markdown==3.3.7
+    # via -r requirements.in
+markupsafe==2.1.1
+    # via jinja2
 openpyxl==3.0.10
     # via tablib
+packaging==21.3
+    # via drf-yasg
 pillow==9.1.1
     # via wagtail
+prompt-toolkit==3.0.30
+    # via click-repl
+pydash==5.1.0
+    # via -r requirements.in
+pyparsing==3.0.9
+    # via packaging
+pyrsistent==0.18.1
+    # via jsonschema
 pytz==2022.1
     # via
+    #   celery
     #   django-modelcluster
     #   djangorestframework
     #   l18n
+pyyaml==6.0
+    # via
+    #   drf-spectacular
+    #   swagger-spec-validator
 requests==2.28.0
-    # via wagtail
+    # via
+    #   coreapi
+    #   wagtail
+ruamel-yaml==0.17.21
+    # via drf-yasg
+ruamel-yaml-clib==0.2.6
+    # via ruamel-yaml
+sentry-sdk==1.6.0
+    # via -r requirements.in
 six==1.16.0
     # via
+    #   click-repl
     #   html5lib
     #   l18n
+    #   swagger-spec-validator
 soupsieve==2.3.2.post1
     # via beautifulsoup4
 sqlparse==0.4.2
     # via django
+swagger-spec-validator==2.7.4
+    # via drf-yasg
 tablib[xls,xlsx]==3.2.1
     # via wagtail
 telepath==0.2
     # via wagtail
+uritemplate==4.1.1
+    # via
+    #   coreapi
+    #   drf-spectacular
+    #   drf-yasg
 urllib3==1.26.9
-    # via requests
+    # via
+    #   requests
+    #   sentry-sdk
+vine==5.0.0
+    # via
+    #   amqp
+    #   celery
+    #   kombu
 wagtail==3.0.1
     # via -r requirements.in
+wcwidth==0.2.5
+    # via prompt-toolkit
 webencodings==0.5.1
     # via html5lib
 willow==1.4.1
@@ -83,3 +187,5 @@ xlsxwriter==3.0.3
     # via wagtail
 xlwt==1.3.0
     # via tablib
+zipp==3.8.0
+    # via importlib-metadata
